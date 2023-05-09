@@ -3,7 +3,7 @@ This project is source code of Dinggul Blog v1. For the source code of v2 in dev
 * <https://github.com/dinggulblog/BACKEND.git>
 * <https://github.com/dinggulblog/FRONTEND.git>
 
-> Dinggul blog is a blogging platform for posts in various categories.
+> Dinggul is a blog platform for posts in various categories.
 
 <https://dinggul.me>
 
