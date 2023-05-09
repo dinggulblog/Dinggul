@@ -45,7 +45,7 @@ Following items are core backend technologies used in this project:
 and more...
 
 ## Run on your machine
-If you want to run Dinggul Blog on your machine, please check [Guidelines](https://github.com/dinggulblog/Dinggul.git) document.
+If you want to run Dinggul Blog on your machine, please check [Guidelines](https://github.com/dinggulblog/Dinggul/blob/master/GUIDELINE.md) document.
 
 ## License
 Dinggule Blog is open-sourced software licensed under the MIT license.
