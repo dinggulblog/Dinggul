@@ -1,0 +1,142 @@
+.slide_item {
+  overflow: hidden;
+  min-width:27rem;
+  width: 27rem;
+
+  @include tablet {
+    min-width:22.2rem;
+    width: 22.2rem;
+  }
+
+  @include mobile {
+    min-width:15.2rem;
+    width: 15.2rem;
+  }
+
+  .thumbnail {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 0.8rem;
+
+    width: 100%;
+    height: 20.8rem;
+
+    @include mobile {
+      height: 15.2rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @media (hover: hover) and (pointer: fine) {
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .ico_like {
+      position: absolute;
+      top: 2rem;
+      right: 1.6rem;
+    }
+  }
+
+  .wrap_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1.7rem 0 0;
+    font-size: 1.6rem;
+
+    .title {
+      display: flex;
+      align-items: center;
+      width: 85%;
+
+      a {
+        color: var(--text4);
+        overflow: hidden;
+        white-space: normal;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        white-space: pre-wrap;
+        width: 95%;
+      }
+
+      .wrap_ico_lock {
+        margin: 0 0 0 0.4rem;
+      }
+    }
+  }
+
+  .wrap_info {
+    display: flex;
+    line-height: 1.5;
+    width: 100%;
+    margin: 2rem 0 0;
+
+    @include mobile_all {
+      font-size: 1.4rem;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+
+    span,
+    a {
+      font-size: 1.2rem;
+      color: var(--text2);
+    }
+
+    .wrap_comment_like {
+      display: flex;
+
+      @include mobile {
+        margin: 1.2rem 0 0;
+      }
+    }
+
+    .createdAt {
+      &::after {
+        content: '·';
+        margin: 0 0.8rem;
+        color: var(--text2);
+      }
+
+      @include mobile {
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    .like_count {
+      display: flex;
+      align-items: center;
+      margin: 0 0 0 1.6rem;
+
+      @include mobile {
+        margin: 0 1.2rem 0 0;
+        &::before {
+          content: '·';
+          margin: 0 0.8rem;
+          color: var(--text2);
+        }
+      }
+    }
+  }
+}

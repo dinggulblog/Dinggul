@@ -1,0 +1,121 @@
+.recent_item {
+  margin: 0 0 3.2rem;
+
+  .wrap_contents {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+    .contents {
+      flex-shrink: 1;
+      flex-grow: 0;
+      width: calc(100% - 15rem - 3.2rem);
+
+      .category {
+        margin: 0 0 1.6rem;
+
+        span {
+          font-size: 1.4rem;
+          color: var(--primary);
+          text-decoration: underline;
+        }
+      }
+
+      .title {
+        display: flex;
+        align-items: center;
+        margin: 0 0 1.2rem;
+        width: calc(100% - 2.4rem);
+
+        a {
+          font-size: 1.6rem;
+          color: var(--text4);
+          overflow: hidden;
+          white-space: normal;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          white-space: pre-wrap;
+
+          @include mobile {
+            font-size: 1.4rem;
+          }
+        }
+
+        .wrap_ico_lock {
+          margin: 0 0 0 0.4rem;
+        }
+      }
+
+      .summary {
+        height: calc(2rem * 2);
+
+        p {
+          width: 100%;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          overflow: hidden;
+          line-height: 2rem;
+          font-size: 1.4rem;
+          color: var(--text2);
+
+          @include mobile {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .wrap_info {
+        display: flex;
+        align-items: center;
+        margin: 1.2rem 0 0;
+
+        div {
+          display: flex;
+          align-items: center;
+        }
+
+        span {
+          font-size: 1.2rem;
+          color: var(--text2);
+        }
+
+        .author {
+          .by {
+            margin: 0 0.4rem 0 0;
+            font-style: italic;
+          }
+
+          &::after {
+            content: '·';
+            margin: 0 0.8rem;
+            color: var(--text2);
+          }
+        }
+      }
+    }
+
+    .thumbnail {
+      flex-shrink: 1;
+      flex-grow: 1;
+      display: flex;
+      min-width: 15.5rem;
+      max-width: 15.5rem;
+      height: 15.5rem;
+      margin: 0 3.2rem 0 0;
+      position: relative;
+
+      img {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        border-radius: 0.8rem;
+        object-fit: cover;
+        left: 0;
+      }
+    }
+  }
+}

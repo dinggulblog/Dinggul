@@ -1,0 +1,101 @@
+/* common */
+
+.fade_up-enter-active,
+.fade_up-leave-active,
+.fade_down-enter-active,
+.fade_down-leave-active,
+.fade_left-enter-active,
+.fade_left-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade_up-enter-from,
+.fade_up-leave-to,
+.fade_down-enter-from,
+.fade_down-leave-to,
+.fade_left-enter-from,
+.fade_left-leave-to {
+  opacity: 0;
+}
+
+/* keyframes */
+
+@keyframes up-in {
+  from {
+    transform: translateY(4rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes up-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(4rem);
+  }
+}
+
+@keyframes left-in {
+  from {
+    transform: translateX(-4rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes left-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-4rem);
+  }
+}
+
+@keyframes down-in {
+  from {
+    transform: translateY(-4rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes down-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-4rem);
+  }
+}
+
+/* enter, leave active */
+
+.fade_up-enter-active {
+  animation: up-in 0.3s;
+}
+
+.fade_up-leave-active {
+  animation: up-out 0.3s;
+}
+
+.fade_down-enter-active {
+  animation: down-in 0.3s;
+}
+
+.fade_down-leave-active {
+  animation: down-out 0.3s;
+}
+
+.fade_left-enter-active {
+  animation: left-in 0.3s;
+}
+
+.fade_left-leave-active {
+  animation: left-out 0.3s;
+}

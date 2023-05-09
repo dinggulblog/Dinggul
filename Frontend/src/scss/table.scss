@@ -1,0 +1,35 @@
+.table-row {
+  display: table-row;
+}
+.table-header {
+  display: table-header-group;
+}
+.table-head,
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+  padding:1.6rem 1.6rem;
+}
+.table-head {
+  font-weight: 500;
+  color: var(--primary-dark);
+}
+.table-cell {
+  color: var(--text4);
+  max-width: 24rem;
+
+  span:not(.role),a {
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: pre-wrap;
+    color: var(--text4);
+  }
+}
+.table-body {
+  display: table-row-group;
+}
+

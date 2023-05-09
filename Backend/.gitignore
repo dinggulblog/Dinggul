@@ -1,0 +1,25 @@
+# package directory and files
+node_modules
+package-lock.json
+
+# .env files
+.env
+.env.develop
+.env.production
+
+# Log files
+npm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.editorconfig
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# others
+config/secret
+uploads

@@ -1,0 +1,45 @@
+.emojis {
+  @include position;
+  width: 363px;
+}
+
+.emojis li {
+  cursor: pointer;
+  float: left;
+  border: 1px solid #e8e8e8;
+  height: 24px;
+  width: 32px;
+  overflow: hidden;
+  margin: -1px 0 0 -1px;
+  padding: 4px 0px;
+  text-align: center;
+  list-style: none;
+  z-index: 11;
+  font-size: 1.8rem;
+
+  &:hover {
+    @include position($z: 1);
+    border: 1px solid var(--primary);
+  }
+}
+
+.emojis * {
+  user-select: none;
+}
+
+
+.default-theme img {
+  padding:0 !important;
+  border: 0 !important;
+  border-radius:0 !important;
+}
+
+.md-editor-content .md-editor-input-wrapper textarea {
+  font-size: 1.6rem !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-family: "Pretendard", "Malgun Gothic", sans-serif !important;
+}
+
+.md-editor-footer-label {
+  font-family: "Pretendard", "Malgun Gothic", sans-serif !important;
+}

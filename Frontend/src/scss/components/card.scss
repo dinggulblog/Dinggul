@@ -1,0 +1,197 @@
+.card_item {
+  --margin_right-24: 2.4rem;
+  --margin_right-20: 2rem;
+  --margin_right-16: 1.6rem;
+  --col3: 3;
+  --col2: 2;
+
+  flex-shrink: 1;
+  flex-grow: 1;
+
+  margin: 0 0 6.4rem 0;
+  margin-right: var(--margin_right-24);
+  width: calc((100% / var(--col3)) - var(--margin_right-24) + (var(--margin_right-24) / var(--col3)));
+  max-width: calc((100% / var(--col3)) - var(--margin_right-24) + (var(--margin_right-24) / var(--col3)));
+
+  @include tablet {
+    margin-right: var(--margin_right-20);
+    width: calc((100% / var(--col2)) - var(--margin_right-20) + (var(--margin_right-20) / var(--col2)));
+    max-width: calc((100% / var(--col2)) - var(--margin_right-20) + (var(--margin_right-20) / var(--col2)));
+  }
+
+  @include mobile {
+    margin-right: var(--margin_right-16);
+    width: calc((100% / var(--col2)) - var(--margin_right-16) + (var(--margin_right-16) / var(--col2)));
+    max-width: calc((100% / var(--col2)) - var(--margin_right-16) + (var(--margin_right-16) / var(--col2)));
+  }
+
+  .wrap_item {
+    @media (hover: hover) and (pointer: fine) {
+      transition: transform 0.25s ease-in 0s;
+
+      &:hover {
+        transform: translateY(-0.4rem);
+      }
+    }
+  }
+
+  .thumbnail {
+    position: relative;
+    width: 100%;
+    height: 20.8rem;
+    border-radius: 0.8rem;
+
+    @include mobile {
+      height: 15.2rem;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      object-fit: cover;
+      border-radius: 0.8rem;
+
+      @include mobile {
+        height: 15.2rem;
+      }
+    }
+
+    .ico_like {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+
+      @include mobile {
+        top: 1.2rem;
+        right: 1.2rem;
+      }
+    }
+  }
+
+  .wrap_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 3.2rem 0 2.4rem 0;
+    font-size: 1.6rem;
+
+    .title {
+      display: flex;
+      align-items: center;
+      width: 85%;
+
+      a {
+        color: var(--text4);
+        overflow: hidden;
+        white-space: normal;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        white-space: pre-wrap;
+        width: 95%;
+      }
+
+      .wrap_ico_lock {
+        margin: 0 0 0 0.4rem;
+      }
+    }
+  }
+
+  .summary {
+    height: calc(3.2rem + (1.9rem / 2));
+
+    @include mobile {
+      display: none;
+    }
+
+    p {
+      width: 100%;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      font-size: 1.4rem;
+      color: var(--text2);
+      line-height: 1.9rem;
+
+      @include mobile_all {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .wrap_info {
+    display: flex;
+    line-height: 1.5;
+    width: 100%;
+    margin: 4.8rem 0 0;
+
+    @include mobile_all {
+      font-size: 1.4rem;
+    }
+
+    @include tablet {
+      margin: 3.2rem 0 0;
+    }
+
+    @include tablet_landscape {
+      margin: 3.2rem 0 0;
+    }
+
+    @include mobile {
+      margin: 3.2rem 0 0;
+      flex-direction: column;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+
+    span,
+    a {
+      font-size: 1.2rem;
+      color: var(--text2);
+    }
+
+    .wrap_comment_like {
+      display: flex;
+
+      @include mobile {
+        margin: 1.2rem 0 0;
+      }
+    }
+
+    .createdAt {
+      &::after {
+        content: '·';
+        margin: 0 0.8rem;
+        color: var(--text2);
+      }
+
+      @include mobile {
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    .like_count {
+      display: flex;
+      align-items: center;
+      margin: 0 0 0 1.6rem;
+
+      @include mobile {
+        margin: 0 1.2rem 0 0;
+        &::before {
+          content: '·';
+          margin: 0 0.8rem;
+          color: var(--text2);
+        }
+      }
+    }
+  }
+}
