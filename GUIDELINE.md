@@ -37,7 +37,7 @@ VUE_APP_GA_MEASUREMENT_ID
 ```
 * SECRET_KEY: Key used for signing up
 * GA_MEASUREMENT_ID: Key used for GA cookies
-
+<br><br>
 This file consists environment variables that are needed in frontend system.
 ```
 COOKIE_SECRET
